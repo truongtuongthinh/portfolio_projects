@@ -246,6 +246,6 @@ use "$raw/ccm_a_70_25.dta", clear
 	
 	* Export to Overleaf
 	esttab eq7_td_ba eq8_td_ba eq7_td_ma eq8_td_ma eq7_ld_ba eq8_ld_ba eq7_ld_ma eq8_ld_ma using "$overleaf/Byoun_2008_IV.tex", replace t(3) b(3) nonumbers nogaps label nonotes keep(_cons IV Med Tax OI MB LnA DEP FA RND D_RND DIV AZ) order(_cons IV Med Tax OI MB LnA DEP FA RND D_RND DIV AZ) starlevels(* 0.10 ** 0.05 *** 0.01) stats(r2_a N, labels(Adj.R-squared Observations) fmt(3 0)) obslast mgroups("TD/BA" "TD/MA" "LD/BA" "LD/MA", pattern(1 0 1 0 1 0 1 0) prefix(\multicolumn{@span}{c}{) suffix(}) span) mtitles("Eq. (7)" "Eq. (8)" "Eq. (7)" "Eq. (8)" "Eq. (7)" "Eq. (8)" "Eq. (7)" "Eq. (8)")
-regress ld_ba Med_ld_ba OI LnA DEP FA RND D_RND DIV AZ
+
 
 
